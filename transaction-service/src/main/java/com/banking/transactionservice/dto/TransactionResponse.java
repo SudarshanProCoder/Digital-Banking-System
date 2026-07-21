@@ -3,8 +3,7 @@ package com.banking.transactionservice.dto;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import org.springframework.transaction.TransactionStatus;
-
+import com.banking.transactionservice.entity.TransactionStatus;
 import com.banking.transactionservice.entity.TransactionType;
 
 import lombok.AllArgsConstructor;
