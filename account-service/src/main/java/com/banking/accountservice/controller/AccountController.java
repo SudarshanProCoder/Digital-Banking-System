@@ -59,8 +59,8 @@ public class AccountController {
      * Called by Transaction Service when transfer is initiated
      */
     @PutMapping("/{accountNumber}/deduct")
-    public ResponseEntity<String> deductBalance(@PathVariable String accountNumber, @RequestParam BigDecimal ammount) {
-        accountService.deductBalance(accountNumber, ammount);
+    public ResponseEntity<String> deductBalance(@PathVariable String accountNumber, @RequestParam BigDecimal amount) {
+        accountService.deductBalance(accountNumber, amount);
 
         return ResponseEntity.ok("Balance deducted Successfully");
     }
@@ -73,8 +73,8 @@ public class AccountController {
      * 2. Transaction Completed -> Credit Receiver
      */
     @PutMapping("/{accountNumber}/credit")
-    public ResponseEntity<String> creditBalance(@PathVariable String accountNumber, @RequestParam BigDecimal ammount) {
-        accountService.creditBalance(accountNumber, ammount);
+    public ResponseEntity<String> creditBalance(@PathVariable String accountNumber, @RequestParam BigDecimal amount) {
+        accountService.creditBalance(accountNumber, amount);
 
         return ResponseEntity.ok("Balance credited Successfully");
     }

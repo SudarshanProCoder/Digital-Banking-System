@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface AccountServiceClient {
     
     @PutMapping("/api/v1/accounts/{accountNumber}/deduct")
-    String deductBalance(@PathVariable String accountNmber, @RequestParam BigDecimal amount);
+    String deductBalance(@PathVariable String accountNumber, @RequestParam BigDecimal amount);
 }

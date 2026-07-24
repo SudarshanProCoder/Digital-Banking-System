@@ -2,6 +2,7 @@ package com.banking.transactionservice.service;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -75,6 +76,22 @@ public class TransactionService {
         return mapToResponse(savedTransaction);
     }
 
+    public TransactionResponse getTransaction(String transactionId) {
+
+        return mapToResponse(transactionRepository.findById(transactionId)
+                .orElseThrow(() -> new RuntimeException("Transaction not found: " + transactionId)));
+    }
+
+    public List<TransactionResponse> getTransactionHistory(String accountNumber) {
+
+        return transactionRepository.findBySenderAccountNumberOrderByCreatedAtDesc(accountNumber).stream()
+                .map(this::mapToResponse).collect(Collectors.toList());
+    }
+
+    public TransactionResponse verifyOTP(String transactionID, String otp) {
+        return null;
+    }
+
     private TransactionResponse mapToResponse(Transaction transaction) {
         TransactionResponse response = new TransactionResponse();
         response.setId(transaction.getId());
@@ -90,18 +107,6 @@ public class TransactionService {
         response.setCompletedAt(transaction.getCompletedAt());
 
         return response;
-    }
-
-    public TransactionResponse getTransaction(String transactionId) {
-        return null;
-    }
-
-    public List<TransactionResponse> getTransactionHistory(String accountNumber) {
-        return null;
-    }
-
-    public TransactionResponse verifyOTP(String transactionID, String otp) {
-        return null;
     }
 
 }
