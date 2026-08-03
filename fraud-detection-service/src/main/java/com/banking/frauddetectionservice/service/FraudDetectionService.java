@@ -103,7 +103,6 @@ public class FraudDetectionService {
         return new FraudCheckResult(false, null);
     }
 
-    @SuppressWarnings("deprecation")
     private boolean isVelocityExceeded(String accountNumber) {
 
         String key = "fraud:velocity" + accountNumber;

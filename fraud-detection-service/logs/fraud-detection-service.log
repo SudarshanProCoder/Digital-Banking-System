@@ -1,0 +1,376 @@
+2026-08-01T21:42:21.400+05:30  INFO 25800 --- [fraud-detection-service] [main] c.b.f.FraudDetectionServiceApplication   : Starting FraudDetectionServiceApplication using Java 21.0.10 with PID 25800 (D:\MY-PROJECTS\banking-system\fraud-detection-service\target\classes started by sudarshan.date in D:\MY-PROJECTS\banking-system\fraud-detection-service)
+2026-08-01T21:42:21.443+05:30  INFO 25800 --- [fraud-detection-service] [main] c.b.f.FraudDetectionServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T21:42:29.384+05:30  INFO 25800 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-01T21:42:29.401+05:30  INFO 25800 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-01T21:42:29.526+05:30  INFO 25800 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+2026-08-01T21:42:30.204+05:30  INFO 25800 --- [fraud-detection-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3cca3144-2522-3bd4-b3c6-d97f655ca53d
+2026-08-01T21:42:31.916+05:30  INFO 25800 --- [fraud-detection-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8084 (http)
+2026-08-01T21:42:31.956+05:30  INFO 25800 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T21:42:31.958+05:30  INFO 25800 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T21:42:32.145+05:30  INFO 25800 --- [fraud-detection-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 10146 ms
+2026-08-01T21:42:32.930+05:30  WARN 25800 --- [fraud-detection-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fraudDetectionEventConsumer' defined in file [D:\MY-PROJECTS\banking-system\fraud-detection-service\target\classes\com\banking\frauddetectionservice\service\FraudDetectionEventConsumer.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fraudDetectionService' defined in file [D:\MY-PROJECTS\banking-system\fraud-detection-service\target\classes\com\banking\frauddetectionservice\service\FraudDetectionService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.banking.frauddetectionservice.client.AccountServiceClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-08-01T21:42:32.958+05:30  INFO 25800 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-01T21:42:33.025+05:30  INFO 25800 --- [fraud-detection-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-01T21:42:33.118+05:30 ERROR 25800 --- [fraud-detection-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.banking.frauddetectionservice.service.FraudDetectionService required a bean of type 'com.banking.frauddetectionservice.client.AccountServiceClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.banking.frauddetectionservice.client.AccountServiceClient' in your configuration.
+
+2026-08-01T21:47:09.605+05:30  INFO 31504 --- [fraud-detection-service] [main] c.b.f.FraudDetectionServiceApplication   : Starting FraudDetectionServiceApplication using Java 21.0.10 with PID 31504 (D:\MY-PROJECTS\banking-system\fraud-detection-service\target\classes started by sudarshan.date in D:\MY-PROJECTS\banking-system\fraud-detection-service)
+2026-08-01T21:47:09.616+05:30  INFO 31504 --- [fraud-detection-service] [main] c.b.f.FraudDetectionServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T21:47:13.815+05:30  INFO 31504 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-01T21:47:13.830+05:30  INFO 31504 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-01T21:47:13.949+05:30  INFO 31504 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 0 Redis repository interfaces.
+2026-08-01T21:47:14.600+05:30  INFO 31504 --- [fraud-detection-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3cca3144-2522-3bd4-b3c6-d97f655ca53d
+2026-08-01T21:47:16.127+05:30  INFO 31504 --- [fraud-detection-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8084 (http)
+2026-08-01T21:47:16.193+05:30  INFO 31504 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T21:47:16.195+05:30  INFO 31504 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T21:47:16.429+05:30  INFO 31504 --- [fraud-detection-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 6610 ms
+2026-08-01T21:47:16.977+05:30  WARN 31504 --- [fraud-detection-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fraudDetectionEventConsumer' defined in file [D:\MY-PROJECTS\banking-system\fraud-detection-service\target\classes\com\banking\frauddetectionservice\service\FraudDetectionEventConsumer.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fraudDetectionService' defined in file [D:\MY-PROJECTS\banking-system\fraud-detection-service\target\classes\com\banking\frauddetectionservice\service\FraudDetectionService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.banking.frauddetectionservice.client.AccountServiceClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-08-01T21:47:16.992+05:30  INFO 31504 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-01T21:47:17.050+05:30  INFO 31504 --- [fraud-detection-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-01T21:47:17.121+05:30 ERROR 31504 --- [fraud-detection-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.banking.frauddetectionservice.service.FraudDetectionService required a bean of type 'com.banking.frauddetectionservice.client.AccountServiceClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.banking.frauddetectionservice.client.AccountServiceClient' in your configuration.
+
+2026-08-01T21:49:30.628+05:30  INFO 30288 --- [fraud-detection-service] [main] c.b.f.FraudDetectionServiceApplication   : Starting FraudDetectionServiceApplication using Java 21.0.10 with PID 30288 (D:\MY-PROJECTS\banking-system\fraud-detection-service\target\classes started by sudarshan.date in D:\MY-PROJECTS\banking-system\fraud-detection-service)
+2026-08-01T21:49:30.638+05:30  INFO 30288 --- [fraud-detection-service] [main] c.b.f.FraudDetectionServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T21:49:33.757+05:30  INFO 30288 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-01T21:49:33.766+05:30  INFO 30288 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-01T21:49:33.848+05:30  INFO 30288 --- [fraud-detection-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2026-08-01T21:49:34.326+05:30  INFO 30288 --- [fraud-detection-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a06fc905-043b-3e13-b976-9e617b9d65ff
+2026-08-01T21:49:35.161+05:30  INFO 30288 --- [fraud-detection-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8084 (http)
+2026-08-01T21:49:35.185+05:30  INFO 30288 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T21:49:35.186+05:30  INFO 30288 --- [fraud-detection-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T21:49:35.352+05:30  INFO 30288 --- [fraud-detection-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4551 ms
+2026-08-01T21:49:40.051+05:30  INFO 30288 --- [fraud-detection-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2026-08-01T21:49:40.714+05:30  INFO 30288 --- [fraud-detection-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8084 (http) with context path '/'
+2026-08-01T21:49:41.199+05:30  INFO 30288 --- [fraud-detection-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-fraud-detection-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = fraud-detection-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-01T21:49:41.542+05:30  INFO 30288 --- [fraud-detection-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:49:41.962+05:30  INFO 30288 --- [fraud-detection-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:49:41.963+05:30  INFO 30288 --- [fraud-detection-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:49:41.964+05:30  INFO 30288 --- [fraud-detection-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785601181958
+2026-08-01T21:49:42.003+05:30  INFO 30288 --- [fraud-detection-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Subscribed to topic(s): transaction.initiated
+2026-08-01T21:49:42.133+05:30  INFO 30288 --- [fraud-detection-service] [main] c.b.f.FraudDetectionServiceApplication   : Started FraudDetectionServiceApplication in 12.542 seconds (process running for 14.382)
+2026-08-01T21:49:42.176+05:30  WARN 30288 --- [fraud-detection-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-01T21:49:42.178+05:30  WARN 30288 --- [fraud-detection-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-01T21:49:43.379+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:49:43.384+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:49:43.391+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] (Re-)joining group
+2026-08-01T21:49:43.434+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Request joining group due to: need to re-join with the given member-id: consumer-fraud-detection-group-1-f36d1781-c5c2-4cf1-b02c-34ca2c2d7621
+2026-08-01T21:49:43.435+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] (Re-)joining group
+2026-08-01T21:49:46.453+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-fraud-detection-group-1-f36d1781-c5c2-4cf1-b02c-34ca2c2d7621', protocol='range'}
+2026-08-01T21:49:46.468+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Finished assignment for group at generation 1: {consumer-fraud-detection-group-1-f36d1781-c5c2-4cf1-b02c-34ca2c2d7621=Assignment(partitions=[transaction.initiated-0])}
+2026-08-01T21:49:46.533+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-fraud-detection-group-1-f36d1781-c5c2-4cf1-b02c-34ca2c2d7621', protocol='range'}
+2026-08-01T21:49:46.536+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Notifying assignor about the new Assignment(partitions=[transaction.initiated-0])
+2026-08-01T21:49:46.542+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Adding newly assigned partitions: [transaction.initiated-0]
+2026-08-01T21:49:46.563+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Found no committed offset for partition transaction.initiated-0
+2026-08-01T21:49:46.600+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-fraud-detection-group-1, groupId=fraud-detection-group] Resetting offset for partition transaction.initiated-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:49:46.604+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : fraud-detection-group: partitions assigned: [transaction.initiated-0]
+2026-08-01T21:49:46.746+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 8a361983-8d3d-4807-a05c-3c65edad7b19
+2026-08-01T21:49:46.991+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 8a361983-8d3d-4807-a05c-3c65edad7b19 account: 503599170931 amount: 2000 balance: 7000.00
+2026-08-01T21:49:48.174+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Transaction clean
+2026-08-01T21:49:48.189+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.config.AbstractConfig   : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = fraud-detection-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transaction.two.phase.commit.enable = false
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-08-01T21:49:48.194+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:49:48.225+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=fraud-detection-service-producer-1] Instantiated an idempotent producer.
+2026-08-01T21:49:48.270+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:49:48.271+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:49:48.271+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785601188270
+2026-08-01T21:49:48.328+05:30  INFO 30288 --- [fraud-detection-service] [kafka-producer-network-thread | fraud-detection-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=fraud-detection-service-producer-1] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:49:48.330+05:30  INFO 30288 --- [fraud-detection-service] [kafka-producer-network-thread | fraud-detection-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=fraud-detection-service-producer-1] ProducerId set to 1 with epoch 0
+2026-08-01T21:50:33.305+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : cdd3339e-e9d2-4512-b235-f63a75b0408e
+2026-08-01T21:50:33.323+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: cdd3339e-e9d2-4512-b235-f63a75b0408e account: 503599170931 amount: 500 balance: 6500.00
+2026-08-01T21:50:33.332+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Transaction clean
+2026-08-01T21:55:06.471+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 84d660a2-e5f0-441e-b826-da8adf1e58b1
+2026-08-01T21:55:06.496+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 84d660a2-e5f0-441e-b826-da8adf1e58b1 account: 503599170931 amount: 500 balance: 6000.00
+2026-08-01T21:55:06.507+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Transaction clean
+2026-08-01T21:55:38.559+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : b48baf5c-d57e-4a28-871a-5b445c2344ff
+2026-08-01T21:55:38.573+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: b48baf5c-d57e-4a28-871a-5b445c2344ff account: 503599170931 amount: 500 balance: 5500.00
+2026-08-01T21:55:38.580+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Transaction clean
+2026-08-01T21:55:39.822+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 83cf8ca9-3dd2-40fa-8783-57c5b52fdc17
+2026-08-01T21:55:39.840+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 83cf8ca9-3dd2-40fa-8783-57c5b52fdc17 account: 503599170931 amount: 500 balance: 5000.00
+2026-08-01T21:55:39.852+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Transaction clean
+2026-08-01T21:55:41.124+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 3ea305e9-c8ed-4056-af78-d9001acb2c9d
+2026-08-01T21:55:41.138+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 3ea305e9-c8ed-4056-af78-d9001acb2c9d account: 503599170931 amount: 500 balance: 4500.00
+2026-08-01T21:55:41.145+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Transaction clean
+2026-08-01T21:55:42.307+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : e2fb3083-dc0d-4407-bda2-f67eb168e3ba
+2026-08-01T21:55:42.322+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: e2fb3083-dc0d-4407-bda2-f67eb168e3ba account: 503599170931 amount: 500 balance: 4000.00
+2026-08-01T21:55:42.328+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Transaction clean
+2026-08-01T21:55:43.420+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 0894549e-0a84-4142-81e7-5ee4c19efde0
+2026-08-01T21:55:43.435+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 0894549e-0a84-4142-81e7-5ee4c19efde0 account: 503599170931 amount: 500 balance: 3500.00
+2026-08-01T21:55:43.439+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification
+2026-08-01T21:55:44.510+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : f5631e6c-91b0-46cb-b8fa-1ab9c95d5086
+2026-08-01T21:55:44.526+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: f5631e6c-91b0-46cb-b8fa-1ab9c95d5086 account: 503599170931 amount: 500 balance: 3000.00
+2026-08-01T21:55:44.529+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification
+2026-08-01T21:55:45.708+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 1e532b5d-10a4-41e5-ad45-73ce097e2ae0
+2026-08-01T21:55:45.726+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 1e532b5d-10a4-41e5-ad45-73ce097e2ae0 account: 503599170931 amount: 500 balance: 2500.00
+2026-08-01T21:55:45.735+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification
+2026-08-01T21:55:46.914+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 0e7affb4-45d3-4e52-b900-15f42cedc357
+2026-08-01T21:55:46.929+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 0e7affb4-45d3-4e52-b900-15f42cedc357 account: 503599170931 amount: 500 balance: 2000.00
+2026-08-01T21:55:46.932+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification
+2026-08-01T21:55:47.974+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 578d3f0f-32de-47d9-8303-bb538eeecee1
+2026-08-01T21:55:47.989+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 578d3f0f-32de-47d9-8303-bb538eeecee1 account: 503599170931 amount: 500 balance: 1500.00
+2026-08-01T21:55:47.992+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification
+2026-08-01T21:55:49.111+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 620616b6-dd00-4790-9683-b557f2f0195a
+2026-08-01T21:55:49.123+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 620616b6-dd00-4790-9683-b557f2f0195a account: 503599170931 amount: 500 balance: 1000.00
+2026-08-01T21:55:49.126+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification
+2026-08-01T21:55:50.229+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : 6332101d-a810-45ef-8267-8d8b9e7372d1
+2026-08-01T21:55:50.243+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: 6332101d-a810-45ef-8267-8d8b9e7372d1 account: 503599170931 amount: 500 balance: 500.00
+2026-08-01T21:55:50.246+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification
+2026-08-01T21:55:51.485+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.s.FraudDetectionEventConsumer      : Received transaction for fraud check : c1625499-2c52-47fc-9350-8ee984c33e5b
+2026-08-01T21:55:51.499+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Checking transaction: c1625499-2c52-47fc-9350-8ee984c33e5b account: 503599170931 amount: 500 balance: 0.00
+2026-08-01T21:55:51.504+05:30  INFO 30288 --- [fraud-detection-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.f.service.FraudDetectionService      : Suspicious activity detected - account: 503599170931reason: Too many transaction in 60 seconds - velocity limit exceeded - requesting OTP verification

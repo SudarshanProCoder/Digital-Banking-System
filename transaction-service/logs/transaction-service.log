@@ -1,0 +1,999 @@
+2026-08-01T21:10:02.865+05:30  INFO 16972 --- [transaction-service] [main] c.b.t.TransactionServiceApplication      : Starting TransactionServiceApplication using Java 21.0.10 with PID 16972 (D:\MY-PROJECTS\banking-system\transaction-service\target\classes started by sudarshan.date in D:\MY-PROJECTS\banking-system\transaction-service)
+2026-08-01T21:10:02.892+05:30  INFO 16972 --- [transaction-service] [main] c.b.t.TransactionServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T21:10:07.131+05:30  INFO 16972 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-01T21:10:07.136+05:30  INFO 16972 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-01T21:10:07.639+05:30  INFO 16972 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 457 ms. Found 1 JPA repository interface.
+2026-08-01T21:10:07.780+05:30  INFO 16972 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-01T21:10:07.785+05:30  INFO 16972 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-01T21:10:07.831+05:30  INFO 16972 --- [transaction-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.banking.transactionservice.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-01T21:10:07.832+05:30  INFO 16972 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2026-08-01T21:10:08.562+05:30  INFO 16972 --- [transaction-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6838515-a983-3132-bc39-cb8903728de0
+2026-08-01T21:10:09.679+05:30  INFO 16972 --- [transaction-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-08-01T21:10:09.712+05:30  INFO 16972 --- [transaction-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T21:10:09.714+05:30  INFO 16972 --- [transaction-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T21:10:09.935+05:30  INFO 16972 --- [transaction-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 6856 ms
+2026-08-01T21:10:10.676+05:30  INFO 16972 --- [transaction-service] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-01T21:10:10.844+05:30  INFO 16972 --- [transaction-service] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-01T21:10:12.016+05:30  INFO 16972 --- [transaction-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-01T21:10:12.095+05:30  INFO 16972 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-01T21:10:12.923+05:30  INFO 16972 --- [transaction-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@444ebefd
+2026-08-01T21:10:12.927+05:30  INFO 16972 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-01T21:10:13.072+05:30  WARN 16972 --- [transaction-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-01T21:10:13.121+05:30  INFO 16972 --- [transaction-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/transaction_db?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: transaction_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-01T21:10:15.018+05:30  INFO 16972 --- [transaction-service] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-01T21:10:15.199+05:30  INFO 16972 --- [transaction-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-01T21:10:15.403+05:30  INFO 16972 --- [transaction-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-01T21:10:16.258+05:30  WARN 16972 --- [transaction-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-01T21:10:19.237+05:30  INFO 16972 --- [transaction-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2026-08-01T21:10:19.657+05:30  INFO 16972 --- [transaction-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-08-01T21:10:19.811+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-account-servers-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = account-servers-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-01T21:10:19.926+05:30  INFO 16972 --- [transaction-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:10:20.193+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:10:20.194+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:10:20.196+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785598820191
+2026-08-01T21:10:20.216+05:30  INFO 16972 --- [transaction-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Subscribed to topic(s): verification.required
+2026-08-01T21:10:20.244+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-account-servers-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = account-servers-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-01T21:10:20.247+05:30  INFO 16972 --- [transaction-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:10:20.270+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:10:20.270+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:10:20.272+05:30  INFO 16972 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785598820269
+2026-08-01T21:10:20.284+05:30  INFO 16972 --- [transaction-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Subscribed to topic(s): fraud.check.clean
+2026-08-01T21:10:20.309+05:30  INFO 16972 --- [transaction-service] [main] c.b.t.TransactionServiceApplication      : Started TransactionServiceApplication in 18.672 seconds (process running for 20.717)
+2026-08-01T21:10:20.324+05:30  WARN 16972 --- [transaction-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-01T21:10:20.325+05:30  WARN 16972 --- [transaction-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-01T21:10:21.593+05:30  WARN 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {fraud.check.clean=LEADER_NOT_AVAILABLE}
+2026-08-01T21:10:21.594+05:30  WARN 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {verification.required=LEADER_NOT_AVAILABLE}
+2026-08-01T21:10:21.601+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:10:21.601+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:10:21.738+05:30  WARN 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 7 : {fraud.check.clean=LEADER_NOT_AVAILABLE}
+2026-08-01T21:10:21.806+05:30  WARN 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 7 : {verification.required=LEADER_NOT_AVAILABLE}
+2026-08-01T21:10:22.010+05:30  WARN 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 9 : {fraud.check.clean=LEADER_NOT_AVAILABLE}
+2026-08-01T21:10:22.148+05:30  WARN 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 9 : {verification.required=LEADER_NOT_AVAILABLE}
+2026-08-01T21:10:22.487+05:30  WARN 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 11 : {fraud.check.clean=LEADER_NOT_AVAILABLE}
+2026-08-01T21:10:24.216+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:10:24.221+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:10:24.319+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Request joining group due to: need to re-join with the given member-id: consumer-account-servers-group-2-5946f549-831e-4fa9-ab4c-4b04e8ea1442
+2026-08-01T21:10:24.321+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:10:24.491+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:10:24.494+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:10:24.509+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Request joining group due to: need to re-join with the given member-id: consumer-account-servers-group-1-034b8ec1-4358-422d-a2b0-85c4fb5a03e8
+2026-08-01T21:10:24.511+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:10:30.408+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-account-servers-group-1-034b8ec1-4358-422d-a2b0-85c4fb5a03e8', protocol='range'}
+2026-08-01T21:10:30.412+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-account-servers-group-2-5946f549-831e-4fa9-ab4c-4b04e8ea1442', protocol='range'}
+2026-08-01T21:10:30.431+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Finished assignment for group at generation 1: {consumer-account-servers-group-1-034b8ec1-4358-422d-a2b0-85c4fb5a03e8=Assignment(partitions=[verification.required-0]), consumer-account-servers-group-2-5946f549-831e-4fa9-ab4c-4b04e8ea1442=Assignment(partitions=[fraud.check.clean-0])}
+2026-08-01T21:10:30.528+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-account-servers-group-1-034b8ec1-4358-422d-a2b0-85c4fb5a03e8', protocol='range'}
+2026-08-01T21:10:30.529+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-account-servers-group-2-5946f549-831e-4fa9-ab4c-4b04e8ea1442', protocol='range'}
+2026-08-01T21:10:30.530+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[verification.required-0])
+2026-08-01T21:10:30.530+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[fraud.check.clean-0])
+2026-08-01T21:10:30.566+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Adding newly assigned partitions: [fraud.check.clean-0]
+2026-08-01T21:10:30.566+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Adding newly assigned partitions: [verification.required-0]
+2026-08-01T21:10:30.596+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Found no committed offset for partition fraud.check.clean-0
+2026-08-01T21:10:30.596+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Found no committed offset for partition verification.required-0
+2026-08-01T21:10:30.646+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Resetting offset for partition verification.required-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:10:30.646+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Resetting offset for partition fraud.check.clean-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:10:30.649+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [verification.required-0]
+2026-08-01T21:10:30.649+05:30  INFO 16972 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [fraud.check.clean-0]
+2026-08-01T21:12:51.874+05:30  INFO 29828 --- [transaction-service] [main] c.b.t.TransactionServiceApplication      : Starting TransactionServiceApplication using Java 21.0.10 with PID 29828 (D:\MY-PROJECTS\banking-system\transaction-service\target\classes started by sudarshan.date in D:\MY-PROJECTS\banking-system\transaction-service)
+2026-08-01T21:12:51.884+05:30  INFO 29828 --- [transaction-service] [main] c.b.t.TransactionServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T21:12:54.372+05:30  INFO 29828 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-01T21:12:54.376+05:30  INFO 29828 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-01T21:12:54.673+05:30  INFO 29828 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 277 ms. Found 1 JPA repository interface.
+2026-08-01T21:12:54.804+05:30  INFO 29828 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-01T21:12:54.808+05:30  INFO 29828 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-01T21:12:54.848+05:30  INFO 29828 --- [transaction-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.banking.transactionservice.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-01T21:12:54.848+05:30  INFO 29828 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2026-08-01T21:12:55.358+05:30  INFO 29828 --- [transaction-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6838515-a983-3132-bc39-cb8903728de0
+2026-08-01T21:12:56.215+05:30  INFO 29828 --- [transaction-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-08-01T21:12:56.247+05:30  INFO 29828 --- [transaction-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T21:12:56.248+05:30  INFO 29828 --- [transaction-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T21:12:56.462+05:30  INFO 29828 --- [transaction-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4466 ms
+2026-08-01T21:12:57.507+05:30  INFO 29828 --- [transaction-service] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-01T21:12:57.660+05:30  INFO 29828 --- [transaction-service] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-01T21:12:58.891+05:30  INFO 29828 --- [transaction-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-01T21:12:58.972+05:30  INFO 29828 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-01T21:12:59.751+05:30  INFO 29828 --- [transaction-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c4be9d8
+2026-08-01T21:12:59.756+05:30  INFO 29828 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-01T21:12:59.879+05:30  WARN 29828 --- [transaction-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-01T21:12:59.926+05:30  INFO 29828 --- [transaction-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/transaction_db?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: transaction_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-01T21:13:01.727+05:30  INFO 29828 --- [transaction-service] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-01T21:13:01.946+05:30  INFO 29828 --- [transaction-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-01T21:13:02.152+05:30  INFO 29828 --- [transaction-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-01T21:13:02.692+05:30  WARN 29828 --- [transaction-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-01T21:13:05.386+05:30  INFO 29828 --- [transaction-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2026-08-01T21:13:05.643+05:30  INFO 29828 --- [transaction-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-08-01T21:13:05.752+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-account-servers-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = account-servers-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-01T21:13:05.869+05:30  INFO 29828 --- [transaction-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:13:06.113+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:13:06.114+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:13:06.115+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785598986109
+2026-08-01T21:13:06.137+05:30  INFO 29828 --- [transaction-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Subscribed to topic(s): fraud.check.clean
+2026-08-01T21:13:06.155+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-account-servers-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = account-servers-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-01T21:13:06.159+05:30  INFO 29828 --- [transaction-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:13:06.179+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:13:06.182+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:13:06.184+05:30  INFO 29828 --- [transaction-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785598986179
+2026-08-01T21:13:06.193+05:30  INFO 29828 --- [transaction-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Subscribed to topic(s): verification.required
+2026-08-01T21:13:06.215+05:30  INFO 29828 --- [transaction-service] [main] c.b.t.TransactionServiceApplication      : Started TransactionServiceApplication in 15.355 seconds (process running for 17.599)
+2026-08-01T21:13:06.230+05:30  WARN 29828 --- [transaction-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-01T21:13:06.230+05:30  WARN 29828 --- [transaction-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-01T21:13:07.382+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:13:07.382+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:13:07.390+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:13:07.390+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:13:07.399+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:07.399+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:07.455+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Request joining group due to: need to re-join with the given member-id: consumer-account-servers-group-2-9f631bde-1440-44e7-8c3e-88dc8ad3f2d5
+2026-08-01T21:13:07.455+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Request joining group due to: need to re-join with the given member-id: consumer-account-servers-group-1-b662e149-e993-4dbe-b0cf-590bfeac1019
+2026-08-01T21:13:07.457+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:07.458+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:12.727+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=2, memberId='consumer-account-servers-group-1-b662e149-e993-4dbe-b0cf-590bfeac1019', protocol='range'}
+2026-08-01T21:13:12.727+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=2, memberId='consumer-account-servers-group-2-9f631bde-1440-44e7-8c3e-88dc8ad3f2d5', protocol='range'}
+2026-08-01T21:13:12.798+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Finished assignment for group at generation 2: {consumer-account-servers-group-2-9f631bde-1440-44e7-8c3e-88dc8ad3f2d5=Assignment(partitions=[verification.required-0]), consumer-account-servers-group-1-b662e149-e993-4dbe-b0cf-590bfeac1019=Assignment(partitions=[fraud.check.clean-0])}
+2026-08-01T21:13:12.830+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=2, memberId='consumer-account-servers-group-1-b662e149-e993-4dbe-b0cf-590bfeac1019', protocol='range'}
+2026-08-01T21:13:12.833+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[fraud.check.clean-0])
+2026-08-01T21:13:12.838+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=2, memberId='consumer-account-servers-group-2-9f631bde-1440-44e7-8c3e-88dc8ad3f2d5', protocol='range'}
+2026-08-01T21:13:12.840+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[verification.required-0])
+2026-08-01T21:13:12.854+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Adding newly assigned partitions: [fraud.check.clean-0]
+2026-08-01T21:13:12.854+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Adding newly assigned partitions: [verification.required-0]
+2026-08-01T21:13:12.892+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Found no committed offset for partition verification.required-0
+2026-08-01T21:13:12.892+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Found no committed offset for partition fraud.check.clean-0
+2026-08-01T21:13:12.943+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Resetting offset for partition verification.required-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:13:12.948+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Resetting offset for partition fraud.check.clean-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:13:12.949+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [verification.required-0]
+2026-08-01T21:13:12.951+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [fraud.check.clean-0]
+2026-08-01T21:13:27.763+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Request joining group due to: group is already rebalancing
+2026-08-01T21:13:27.763+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Request joining group due to: group is already rebalancing
+2026-08-01T21:13:27.766+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Revoke previously assigned partitions [fraud.check.clean-0]
+2026-08-01T21:13:27.766+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Revoke previously assigned partitions [verification.required-0]
+2026-08-01T21:13:27.768+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions revoked: [verification.required-0]
+2026-08-01T21:13:27.768+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions revoked: [fraud.check.clean-0]
+2026-08-01T21:13:27.770+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:27.770+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:27.787+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=3, memberId='consumer-account-servers-group-1-b662e149-e993-4dbe-b0cf-590bfeac1019', protocol='range'}
+2026-08-01T21:13:27.790+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=3, memberId='consumer-account-servers-group-2-9f631bde-1440-44e7-8c3e-88dc8ad3f2d5', protocol='range'}
+2026-08-01T21:13:28.231+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Finished assignment for group at generation 3: {consumer-account-servers-group-1-6508ff5a-f1bc-45a7-adea-068036afa4ac=Assignment(partitions=[fraud.detected-0]), consumer-account-servers-group-2-9f631bde-1440-44e7-8c3e-88dc8ad3f2d5=Assignment(partitions=[verification.required-0]), consumer-account-servers-group-2-fae0fd51-54cb-4ba7-8d62-9c1e21e77b20=Assignment(partitions=[transaction.completed-0]), consumer-account-servers-group-1-b662e149-e993-4dbe-b0cf-590bfeac1019=Assignment(partitions=[fraud.check.clean-0])}
+2026-08-01T21:13:28.249+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=3, memberId='consumer-account-servers-group-1-b662e149-e993-4dbe-b0cf-590bfeac1019', protocol='range'}
+2026-08-01T21:13:28.249+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=3, memberId='consumer-account-servers-group-2-9f631bde-1440-44e7-8c3e-88dc8ad3f2d5', protocol='range'}
+2026-08-01T21:13:28.251+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[fraud.check.clean-0])
+2026-08-01T21:13:28.251+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[verification.required-0])
+2026-08-01T21:13:28.252+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Adding newly assigned partitions: [fraud.check.clean-0]
+2026-08-01T21:13:28.252+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Adding newly assigned partitions: [verification.required-0]
+2026-08-01T21:13:28.261+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Found no committed offset for partition verification.required-0
+2026-08-01T21:13:28.261+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Found no committed offset for partition fraud.check.clean-0
+2026-08-01T21:13:28.270+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Resetting offset for partition verification.required-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:13:28.270+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Resetting offset for partition fraud.check.clean-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:13:28.271+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [verification.required-0]
+2026-08-01T21:13:28.271+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [fraud.check.clean-0]
+2026-08-01T21:38:24.426+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Disconnecting from node 1 due to request timeout.
+2026-08-01T21:38:24.449+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Cancelled in-flight FETCH request with correlation id 348 due to node 1 being disconnected (elapsed time since creation: 1368353ms, elapsed time since send: 1368353ms, throttle time: 0ms, request timeout: 30000ms)
+2026-08-01T21:38:24.469+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Disconnecting from node 1 due to request timeout.
+2026-08-01T21:38:24.530+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Cancelled in-flight FETCH request with correlation id 350 due to node 1 being disconnected (elapsed time since creation: 1368422ms, elapsed time since send: 1368422ms, throttle time: 0ms, request timeout: 30000ms)
+2026-08-01T21:38:24.603+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Error sending fetch request (sessionId=151377161, epoch=283) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException
+
+2026-08-01T21:38:24.487+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Error sending fetch request (sessionId=229337332, epoch=283) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException
+
+2026-08-01T21:38:24.800+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2026-08-01T21:38:24.896+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:24.896+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2026-08-01T21:38:24.901+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Client requested disconnect from node 2147483646
+2026-08-01T21:38:24.903+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:25.086+05:30  INFO 29828 --- [transaction-service] [kafka-coordinator-heartbeat-thread | account-servers-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Client requested disconnect from node 2147483646
+2026-08-01T21:38:25.572+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:25.604+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:46.114+05:30  WARN 29828 --- [transaction-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m16s200ms668µs300ns).
+2026-08-01T21:39:35.825+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-01T21:39:35.828+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-01T21:39:35.859+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
+2026-08-01T21:41:34.443+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 2000
+2026-08-01T21:41:37.477+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 8a361983-8d3d-4807-a05c-3c65edad7b19
+2026-08-01T21:41:37.501+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] o.a.kafka.common.config.AbstractConfig   : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = transaction-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transaction.two.phase.commit.enable = false
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-08-01T21:41:37.505+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:41:37.536+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=transaction-service-producer-1] Instantiated an idempotent producer.
+2026-08-01T21:41:37.575+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:41:37.576+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:41:37.577+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785600697575
+2026-08-01T21:41:37.625+05:30  WARN 29828 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] The metadata response from the cluster reported a recoverable issue with correlation id 2 : {transaction.initiated=LEADER_NOT_AVAILABLE}
+2026-08-01T21:41:37.626+05:30  INFO 29828 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=transaction-service-producer-1] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:41:37.681+05:30  INFO 29828 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=transaction-service-producer-1] ProducerId set to 0 with epoch 0
+2026-08-01T21:41:37.837+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 8a361983-8d3d-4807-a05c-3c65edad7b19
+2026-08-01T21:49:48.657+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.t.service.TransactionService         : SAGA COMPLETE - Transaction 8a361983-8d3d-4807-a05c-3c65edad7b19 completed
+2026-08-01T21:50:33.186+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-6] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:50:33.270+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-6] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: cdd3339e-e9d2-4512-b235-f63a75b0408e
+2026-08-01T21:50:33.278+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-6] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: cdd3339e-e9d2-4512-b235-f63a75b0408e
+2026-08-01T21:50:33.449+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.t.service.TransactionService         : SAGA COMPLETE - Transaction cdd3339e-e9d2-4512-b235-f63a75b0408e completed
+2026-08-01T21:54:06.153+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-8] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 7500
+2026-08-01T21:54:06.288+05:30 ERROR 29828 --- [transaction-service] [http-nio-8082-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$InternalServerError: [500] during [PUT] to [http://localhost:8081/api/v1/accounts/503599170931/deduct?amount=7500] [AccountServiceClient#deductBalance(String,BigDecimal)]: [{"timestamp":"2026-08-01T16:24:06.210Z","status":500,"error":"Internal Server Error","path":"/api/v1/accounts/503599170931/deduct"}]] with root cause
+
+feign.FeignException$InternalServerError: [500] during [PUT] to [http://localhost:8081/api/v1/accounts/503599170931/deduct?amount=7500] [AccountServiceClient#deductBalance(String,BigDecimal)]: [{"timestamp":"2026-08-01T16:24:06.210Z","status":500,"error":"Internal Server Error","path":"/api/v1/accounts/503599170931/deduct"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:281) ~[feign-core-13.6.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:226) ~[feign-core-13.6.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:213) ~[feign-core-13.6.1.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:103) ~[feign-core-13.6.1.jar:na]
+	at feign.InvocationContext.decodeError(InvocationContext.java:133) ~[feign-core-13.6.1.jar:na]
+	at feign.InvocationContext.proceed(InvocationContext.java:80) ~[feign-core-13.6.1.jar:na]
+	at feign.ResponseHandler.handleResponse(ResponseHandler.java:69) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:109) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.1.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.1.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy178.deductBalance(Unknown Source) ~[na:na]
+	at com.banking.transactionservice.service.TransactionService.transfer(TransactionService.java:59) ~[classes/:na]
+	at com.banking.transactionservice.controller.TransactionController.transfer(TransactionController.java:33) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-08-01T21:55:06.369+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-9] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:06.447+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-9] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 84d660a2-e5f0-441e-b826-da8adf1e58b1
+2026-08-01T21:55:06.449+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-9] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 84d660a2-e5f0-441e-b826-da8adf1e58b1
+2026-08-01T21:55:06.651+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.t.service.TransactionService         : SAGA COMPLETE - Transaction 84d660a2-e5f0-441e-b826-da8adf1e58b1 completed
+2026-08-01T21:55:38.458+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-10] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:38.533+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-10] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: b48baf5c-d57e-4a28-871a-5b445c2344ff
+2026-08-01T21:55:38.534+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-10] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: b48baf5c-d57e-4a28-871a-5b445c2344ff
+2026-08-01T21:55:38.654+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.t.service.TransactionService         : SAGA COMPLETE - Transaction b48baf5c-d57e-4a28-871a-5b445c2344ff completed
+2026-08-01T21:55:39.671+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-2] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:39.795+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-2] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 83cf8ca9-3dd2-40fa-8783-57c5b52fdc17
+2026-08-01T21:55:39.796+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-2] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 83cf8ca9-3dd2-40fa-8783-57c5b52fdc17
+2026-08-01T21:55:39.950+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.t.service.TransactionService         : SAGA COMPLETE - Transaction 83cf8ca9-3dd2-40fa-8783-57c5b52fdc17 completed
+2026-08-01T21:55:41.032+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-4] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:41.096+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-4] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 3ea305e9-c8ed-4056-af78-d9001acb2c9d
+2026-08-01T21:55:41.097+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-4] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 3ea305e9-c8ed-4056-af78-d9001acb2c9d
+2026-08-01T21:55:41.226+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.t.service.TransactionService         : SAGA COMPLETE - Transaction 3ea305e9-c8ed-4056-af78-d9001acb2c9d completed
+2026-08-01T21:55:42.189+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:42.286+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: e2fb3083-dc0d-4407-bda2-f67eb168e3ba
+2026-08-01T21:55:42.288+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-3] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: e2fb3083-dc0d-4407-bda2-f67eb168e3ba
+2026-08-01T21:55:42.402+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.b.t.service.TransactionService         : SAGA COMPLETE - Transaction e2fb3083-dc0d-4407-bda2-f67eb168e3ba completed
+2026-08-01T21:55:43.305+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-5] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:43.399+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-5] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 0894549e-0a84-4142-81e7-5ee4c19efde0
+2026-08-01T21:55:43.401+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-5] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 0894549e-0a84-4142-81e7-5ee4c19efde0
+2026-08-01T21:55:43.504+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: 0894549e-0a84-4142-81e7-5ee4c19efde0 reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:44.423+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-6] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:44.489+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-6] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: f5631e6c-91b0-46cb-b8fa-1ab9c95d5086
+2026-08-01T21:55:44.491+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-6] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: f5631e6c-91b0-46cb-b8fa-1ab9c95d5086
+2026-08-01T21:55:44.708+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: 0894549e-0a84-4142-81e7-5ee4c19efde0 expires in 5 min
+2026-08-01T21:55:44.744+05:30  WARN 29828 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] The metadata response from the cluster reported a recoverable issue with correlation id 28 : {transaction.otp.generated=LEADER_NOT_AVAILABLE}
+2026-08-01T21:55:44.881+05:30  WARN 29828 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] The metadata response from the cluster reported a recoverable issue with correlation id 29 : {transaction.otp.generated=LEADER_NOT_AVAILABLE}
+2026-08-01T21:55:45.127+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: f5631e6c-91b0-46cb-b8fa-1ab9c95d5086 reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:45.216+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: f5631e6c-91b0-46cb-b8fa-1ab9c95d5086 expires in 5 min
+2026-08-01T21:55:45.601+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-7] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:45.686+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-7] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 1e532b5d-10a4-41e5-ad45-73ce097e2ae0
+2026-08-01T21:55:45.688+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-7] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 1e532b5d-10a4-41e5-ad45-73ce097e2ae0
+2026-08-01T21:55:45.756+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: 1e532b5d-10a4-41e5-ad45-73ce097e2ae0 reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:45.831+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: 1e532b5d-10a4-41e5-ad45-73ce097e2ae0 expires in 5 min
+2026-08-01T21:55:46.755+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-8] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:46.886+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-8] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 0e7affb4-45d3-4e52-b900-15f42cedc357
+2026-08-01T21:55:46.887+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-8] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 0e7affb4-45d3-4e52-b900-15f42cedc357
+2026-08-01T21:55:46.963+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: 0e7affb4-45d3-4e52-b900-15f42cedc357 reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:47.044+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: 0e7affb4-45d3-4e52-b900-15f42cedc357 expires in 5 min
+2026-08-01T21:55:47.839+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-9] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:47.943+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-9] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 578d3f0f-32de-47d9-8303-bb538eeecee1
+2026-08-01T21:55:47.945+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-9] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 578d3f0f-32de-47d9-8303-bb538eeecee1
+2026-08-01T21:55:48.018+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: 578d3f0f-32de-47d9-8303-bb538eeecee1 reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:48.102+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: 578d3f0f-32de-47d9-8303-bb538eeecee1 expires in 5 min
+2026-08-01T21:55:49.000+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-10] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:49.096+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-10] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 620616b6-dd00-4790-9683-b557f2f0195a
+2026-08-01T21:55:49.097+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-10] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 620616b6-dd00-4790-9683-b557f2f0195a
+2026-08-01T21:55:49.142+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: 620616b6-dd00-4790-9683-b557f2f0195a reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:49.219+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: 620616b6-dd00-4790-9683-b557f2f0195a expires in 5 min
+2026-08-01T21:55:50.106+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-1] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:50.205+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-1] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: 6332101d-a810-45ef-8267-8d8b9e7372d1
+2026-08-01T21:55:50.206+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-1] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: 6332101d-a810-45ef-8267-8d8b9e7372d1
+2026-08-01T21:55:50.261+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: 6332101d-a810-45ef-8267-8d8b9e7372d1 reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:50.309+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: 6332101d-a810-45ef-8267-8d8b9e7372d1 expires in 5 min
+2026-08-01T21:55:51.358+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-2] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:51.457+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-2] c.b.t.service.TransactionService         : Transaction saved as PROCESSING: c1625499-2c52-47fc-9350-8ee984c33e5b
+2026-08-01T21:55:51.458+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-2] c.b.t.service.TransactionService         : SAGA STEP - 2 : TransactionInitiatedEvent published: c1625499-2c52-47fc-9350-8ee984c33e5b
+2026-08-01T21:55:51.532+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : Verification required - transaction: c1625499-2c52-47fc-9350-8ee984c33e5b reason: Too many transaction in 60 seconds - velocity limit exceeded
+2026-08-01T21:55:51.615+05:30  INFO 29828 --- [transaction-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.t.service.TransactionEventConsumer   : OTP Generated for transaction: c1625499-2c52-47fc-9350-8ee984c33e5b expires in 5 min
+2026-08-01T21:55:52.347+05:30  INFO 29828 --- [transaction-service] [http-nio-8082-exec-4] c.b.t.service.TransactionService         : SAGA START - Transfer: 503599170931 -> 521313732206 amount: 500
+2026-08-01T21:55:52.372+05:30 ERROR 29828 --- [transaction-service] [http-nio-8082-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$InternalServerError: [500] during [PUT] to [http://localhost:8081/api/v1/accounts/503599170931/deduct?amount=500] [AccountServiceClient#deductBalance(String,BigDecimal)]: [{"timestamp":"2026-08-01T16:25:52.367Z","status":500,"error":"Internal Server Error","path":"/api/v1/accounts/503599170931/deduct"}]] with root cause
+
+feign.FeignException$InternalServerError: [500] during [PUT] to [http://localhost:8081/api/v1/accounts/503599170931/deduct?amount=500] [AccountServiceClient#deductBalance(String,BigDecimal)]: [{"timestamp":"2026-08-01T16:25:52.367Z","status":500,"error":"Internal Server Error","path":"/api/v1/accounts/503599170931/deduct"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:281) ~[feign-core-13.6.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:226) ~[feign-core-13.6.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:213) ~[feign-core-13.6.1.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:103) ~[feign-core-13.6.1.jar:na]
+	at feign.InvocationContext.decodeError(InvocationContext.java:133) ~[feign-core-13.6.1.jar:na]
+	at feign.InvocationContext.proceed(InvocationContext.java:80) ~[feign-core-13.6.1.jar:na]
+	at feign.ResponseHandler.handleResponse(ResponseHandler.java:69) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:109) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.1.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.1.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy178.deductBalance(Unknown Source) ~[na:na]
+	at com.banking.transactionservice.service.TransactionService.transfer(TransactionService.java:59) ~[classes/:na]
+	at com.banking.transactionservice.controller.TransactionController.transfer(TransactionController.java:33) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-08-01T22:03:19.497+05:30  WARN 29828 --- [transaction-service] [http-nio-8082-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'transactionID' for method parameter type String is not present]
+2026-08-01T22:04:24.228+05:30  WARN 29828 --- [transaction-service] [http-nio-8082-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'transactionID' for method parameter type String is not present]
+2026-08-01T22:05:10.571+05:30  WARN 29828 --- [transaction-service] [http-nio-8082-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'transactionID' for method parameter type String is not present]
