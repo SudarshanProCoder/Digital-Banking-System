@@ -8,6 +8,37 @@
             "mainClass": "com.banking.accountservice.AccountServiceApplication",
             "projectName": "account-service",
             "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=51629 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=account-service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-TransactionServiceApplication<transaction-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.banking.transactionservice.TransactionServiceApplication",
+            "projectName": "transaction-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayApplication<api-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.banking.apigateway.ApiGatewayApplication",
+            "projectName": "api-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-FraudDetectionServiceApplication<fraud-detection-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.banking.frauddetectionservice.FraudDetectionServiceApplication",
+            "projectName": "fraud-detection-service",
+            "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
     ]

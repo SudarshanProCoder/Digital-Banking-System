@@ -1,0 +1,485 @@
+2026-08-01T21:13:10.042+05:30  INFO 20632 --- [account-service] [main] c.b.a.AccountServiceApplication          : Starting AccountServiceApplication using Java 21.0.10 with PID 20632 (D:\MY-PROJECTS\banking-system\account-service\target\classes started by sudarshan.date in D:\MY-PROJECTS\banking-system\account-service)
+2026-08-01T21:13:10.071+05:30  INFO 20632 --- [account-service] [main] c.b.a.AccountServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-01T21:13:13.943+05:30  INFO 20632 --- [account-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-01T21:13:14.106+05:30  INFO 20632 --- [account-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interface.
+2026-08-01T21:13:15.381+05:30  INFO 20632 --- [account-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-08-01T21:13:15.406+05:30  INFO 20632 --- [account-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-01T21:13:15.407+05:30  INFO 20632 --- [account-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-01T21:13:16.012+05:30  INFO 20632 --- [account-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5810 ms
+2026-08-01T21:13:16.946+05:30  INFO 20632 --- [account-service] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-01T21:13:17.112+05:30  INFO 20632 --- [account-service] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-01T21:13:18.235+05:30  INFO 20632 --- [account-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-01T21:13:18.331+05:30  INFO 20632 --- [account-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-01T21:13:19.133+05:30  INFO 20632 --- [account-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@278c67a7
+2026-08-01T21:13:19.139+05:30  INFO 20632 --- [account-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-01T21:13:19.311+05:30  WARN 20632 --- [account-service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-01T21:13:19.374+05:30  INFO 20632 --- [account-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/account_db?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: account_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-01T21:13:22.228+05:30  INFO 20632 --- [account-service] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-01T21:13:22.574+05:30  INFO 20632 --- [account-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-01T21:13:22.877+05:30  INFO 20632 --- [account-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-01T21:13:23.490+05:30  WARN 20632 --- [account-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-01T21:13:25.214+05:30  INFO 20632 --- [account-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-08-01T21:13:25.482+05:30  INFO 20632 --- [account-service] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-08-01T21:13:25.580+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-account-servers-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = account-servers-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-01T21:13:25.690+05:30  INFO 20632 --- [account-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:13:25.947+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:13:25.948+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:13:25.949+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785599005944
+2026-08-01T21:13:25.969+05:30  INFO 20632 --- [account-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Subscribed to topic(s): fraud.detected
+2026-08-01T21:13:25.990+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-account-servers-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = account-servers-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-01T21:13:25.993+05:30  INFO 20632 --- [account-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-01T21:13:26.014+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-08-01T21:13:26.015+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-08-01T21:13:26.015+05:30  INFO 20632 --- [account-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1785599006014
+2026-08-01T21:13:26.024+05:30  INFO 20632 --- [account-service] [main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Subscribed to topic(s): transaction.completed
+2026-08-01T21:13:26.050+05:30  INFO 20632 --- [account-service] [main] c.b.a.AccountServiceApplication          : Started AccountServiceApplication in 17.019 seconds (process running for 18.937)
+2026-08-01T21:13:26.070+05:30  WARN 20632 --- [account-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-01T21:13:26.072+05:30  WARN 20632 --- [account-service] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-01T21:13:27.229+05:30  WARN 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {transaction.completed=LEADER_NOT_AVAILABLE}
+2026-08-01T21:13:27.229+05:30  WARN 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {fraud.detected=LEADER_NOT_AVAILABLE}
+2026-08-01T21:13:27.236+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:13:27.236+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Cluster ID: hAjhgFOGTH-W9_kNrehPCA
+2026-08-01T21:13:27.249+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:13:27.249+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:13:27.261+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:27.262+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:27.364+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Request joining group due to: need to re-join with the given member-id: consumer-account-servers-group-2-fae0fd51-54cb-4ba7-8d62-9c1e21e77b20
+2026-08-01T21:13:27.365+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Request joining group due to: need to re-join with the given member-id: consumer-account-servers-group-1-6508ff5a-f1bc-45a7-adea-068036afa4ac
+2026-08-01T21:13:27.367+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:27.367+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] (Re-)joining group
+2026-08-01T21:13:27.373+05:30  WARN 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 10 : {transaction.completed=LEADER_NOT_AVAILABLE}
+2026-08-01T21:13:27.374+05:30  WARN 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] The metadata response from the cluster reported a recoverable issue with correlation id 10 : {fraud.detected=LEADER_NOT_AVAILABLE}
+2026-08-01T21:13:27.783+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=3, memberId='consumer-account-servers-group-1-6508ff5a-f1bc-45a7-adea-068036afa4ac', protocol='range'}
+2026-08-01T21:13:27.787+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully joined group with generation Generation{generationId=3, memberId='consumer-account-servers-group-2-fae0fd51-54cb-4ba7-8d62-9c1e21e77b20', protocol='range'}
+2026-08-01T21:13:28.242+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=3, memberId='consumer-account-servers-group-1-6508ff5a-f1bc-45a7-adea-068036afa4ac', protocol='range'}
+2026-08-01T21:13:28.246+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Successfully synced group in generation Generation{generationId=3, memberId='consumer-account-servers-group-2-fae0fd51-54cb-4ba7-8d62-9c1e21e77b20', protocol='range'}
+2026-08-01T21:13:28.253+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[transaction.completed-0])
+2026-08-01T21:13:28.253+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Notifying assignor about the new Assignment(partitions=[fraud.detected-0])
+2026-08-01T21:13:28.263+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Adding newly assigned partitions: [fraud.detected-0]
+2026-08-01T21:13:28.263+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Adding newly assigned partitions: [transaction.completed-0]
+2026-08-01T21:13:28.290+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Found no committed offset for partition fraud.detected-0
+2026-08-01T21:13:28.290+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Found no committed offset for partition transaction.completed-0
+2026-08-01T21:13:28.325+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Resetting offset for partition transaction.completed-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:13:28.325+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Resetting offset for partition fraud.detected-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-08-01T21:13:28.329+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [transaction.completed-0]
+2026-08-01T21:13:28.329+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : account-servers-group: partitions assigned: [fraud.detected-0]
+2026-08-01T21:38:24.476+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Disconnecting from node 2147483646 due to request timeout.
+2026-08-01T21:38:24.483+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Cancelled in-flight HEARTBEAT request with correlation id 311 due to node 2147483646 being disconnected (elapsed time since creation: 1367096ms, elapsed time since send: 1367096ms, throttle time: 0ms, request timeout: 30000ms)
+2026-08-01T21:38:24.493+05:30  INFO 20632 --- [account-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2026-08-01T21:38:24.499+05:30  INFO 20632 --- [account-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:24.513+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Disconnecting from node 1 due to request timeout.
+2026-08-01T21:38:24.535+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Cancelled in-flight FETCH request with correlation id 310 due to node 1 being disconnected (elapsed time since creation: 1368566ms, elapsed time since send: 1368566ms, throttle time: 0ms, request timeout: 30000ms)
+2026-08-01T21:38:24.571+05:30  INFO 20632 --- [account-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Error sending fetch request (sessionId=2028766339, epoch=252) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException
+
+2026-08-01T21:38:24.640+05:30  INFO 20632 --- [account-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2026-08-01T21:38:24.654+05:30  INFO 20632 --- [account-service] [kafka-coordinator-heartbeat-thread | account-servers-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:24.657+05:30  INFO 20632 --- [account-service] [kafka-coordinator-heartbeat-thread | account-servers-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Client requested disconnect from node 2147483646
+2026-08-01T21:38:25.480+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-2, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:25.621+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:25.660+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-account-servers-group-1, groupId=account-servers-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-08-01T21:38:35.487+05:30  WARN 20632 --- [account-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m16s195ms933µs700ns).
+2026-08-01T21:41:34.785+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-01T21:41:34.786+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-01T21:41:34.791+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-08-01T21:41:34.983+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : I am deducting balance 2000 from account : 503599170931
+2026-08-01T21:41:37.299+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : Balance updated. New Balance 7000.00 
+2026-08-01T21:49:48.760+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountEventConsumer       : Crediting account: 521313732206 amount: 2000.0
+2026-08-01T21:49:48.766+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Crediting 2000.0 to account : 521313732206
+2026-08-01T21:49:48.904+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Balance Credited. New Balance: 7000.00
+2026-08-01T21:50:33.195+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-4] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:50:33.237+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-4] c.b.a.service.AccountService             : Balance updated. New Balance 6500.00 
+2026-08-01T21:50:33.469+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountEventConsumer       : Crediting account: 521313732206 amount: 500.0
+2026-08-01T21:50:33.470+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Crediting 500.0 to account : 521313732206
+2026-08-01T21:50:33.516+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Balance Credited. New Balance: 7500.00
+2026-08-01T21:54:06.161+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-8] c.b.a.service.AccountService             : I am deducting balance 7500 from account : 503599170931
+2026-08-01T21:54:06.181+05:30 ERROR 20632 --- [account-service] [http-nio-8081-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Insufficient funds for account 503599170931] with root cause
+
+java.lang.RuntimeException: Insufficient funds for account 503599170931
+	at com.banking.accountservice.service.AccountService.deductBalance(AccountService.java:124) ~[classes/:na]
+	at com.banking.accountservice.controller.AccountController.deductBalance(AccountController.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-08-01T21:55:06.377+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-9] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:06.414+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-9] c.b.a.service.AccountService             : Balance updated. New Balance 6000.00 
+2026-08-01T21:55:06.664+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountEventConsumer       : Crediting account: 521313732206 amount: 500.0
+2026-08-01T21:55:06.665+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Crediting 500.0 to account : 521313732206
+2026-08-01T21:55:06.712+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Balance Credited. New Balance: 8000.00
+2026-08-01T21:55:38.463+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:38.502+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : Balance updated. New Balance 5500.00 
+2026-08-01T21:55:38.666+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountEventConsumer       : Crediting account: 521313732206 amount: 500.0
+2026-08-01T21:55:38.667+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Crediting 500.0 to account : 521313732206
+2026-08-01T21:55:38.703+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Balance Credited. New Balance: 8500.00
+2026-08-01T21:55:39.676+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-3] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:39.758+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-3] c.b.a.service.AccountService             : Balance updated. New Balance 5000.00 
+2026-08-01T21:55:39.977+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountEventConsumer       : Crediting account: 521313732206 amount: 500.0
+2026-08-01T21:55:39.978+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Crediting 500.0 to account : 521313732206
+2026-08-01T21:55:40.025+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Balance Credited. New Balance: 9000.00
+2026-08-01T21:55:41.036+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-5] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:41.070+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-5] c.b.a.service.AccountService             : Balance updated. New Balance 4500.00 
+2026-08-01T21:55:41.247+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountEventConsumer       : Crediting account: 521313732206 amount: 500.0
+2026-08-01T21:55:41.248+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Crediting 500.0 to account : 521313732206
+2026-08-01T21:55:41.285+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Balance Credited. New Balance: 9500.00
+2026-08-01T21:55:42.194+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-7] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:42.257+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-7] c.b.a.service.AccountService             : Balance updated. New Balance 4000.00 
+2026-08-01T21:55:42.428+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountEventConsumer       : Crediting account: 521313732206 amount: 500.0
+2026-08-01T21:55:42.429+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Crediting 500.0 to account : 521313732206
+2026-08-01T21:55:42.501+05:30  INFO 20632 --- [account-service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] c.b.a.service.AccountService             : Balance Credited. New Balance: 10000.00
+2026-08-01T21:55:43.309+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-9] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:43.363+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-9] c.b.a.service.AccountService             : Balance updated. New Balance 3500.00 
+2026-08-01T21:55:44.427+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:44.461+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : Balance updated. New Balance 3000.00 
+2026-08-01T21:55:45.609+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-3] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:45.648+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-3] c.b.a.service.AccountService             : Balance updated. New Balance 2500.00 
+2026-08-01T21:55:46.759+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-5] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:46.855+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-5] c.b.a.service.AccountService             : Balance updated. New Balance 2000.00 
+2026-08-01T21:55:47.843+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-7] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:47.914+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-7] c.b.a.service.AccountService             : Balance updated. New Balance 1500.00 
+2026-08-01T21:55:49.004+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-9] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:49.067+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-9] c.b.a.service.AccountService             : Balance updated. New Balance 1000.00 
+2026-08-01T21:55:50.110+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:50.175+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-2] c.b.a.service.AccountService             : Balance updated. New Balance 500.00 
+2026-08-01T21:55:51.362+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-3] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:51.428+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-3] c.b.a.service.AccountService             : Balance updated. New Balance 0.00 
+2026-08-01T21:55:52.351+05:30  INFO 20632 --- [account-service] [http-nio-8081-exec-5] c.b.a.service.AccountService             : I am deducting balance 500 from account : 503599170931
+2026-08-01T21:55:52.364+05:30 ERROR 20632 --- [account-service] [http-nio-8081-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Insufficient funds for account 503599170931] with root cause
+
+java.lang.RuntimeException: Insufficient funds for account 503599170931
+	at com.banking.accountservice.service.AccountService.deductBalance(AccountService.java:124) ~[classes/:na]
+	at com.banking.accountservice.controller.AccountController.deductBalance(AccountController.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+

@@ -107,11 +107,11 @@ public class AccountService {
      * Called by Transaction Service
      * 
      * @param accountNumber
-     * @param ammount
+     * @param amount
      */
-    public void deductBalance(String accountNumber, BigDecimal ammount) {
+    public void deductBalance(String accountNumber, BigDecimal amount) {
 
-        log.info("I am deducting balance {} from account : {}", ammount, accountNumber);
+        log.info("I am deducting balance {} from account : {}", amount, accountNumber);
 
         Account account = accountRepository.findByAccountNumber(accountNumber)
                 .orElseThrow(() -> new RuntimeException("Account Not Found"));
@@ -120,11 +120,11 @@ public class AccountService {
             throw new RuntimeException("Account is not active" + accountNumber);
         }
 
-        if (account.getBalance().compareTo(ammount) < 0) {
+        if (account.getBalance().compareTo(amount) < 0) {
             throw new RuntimeException("Insufficient funds for account " + accountNumber);
         }
 
-        account.setBalance(account.getBalance().subtract(ammount));
+        account.setBalance(account.getBalance().subtract(amount));
         accountRepository.save(account);
 
         log.info("Balance updated. New Balance {} ", account.getBalance());
@@ -135,16 +135,16 @@ public class AccountService {
      * Called by transaction service via kafka
      * 
      * @param accountNumber
-     * @param ammount
+     * @param amount
      */
-    public void creditBalance(String accountNumber, BigDecimal ammount) {
+    public void creditBalance(String accountNumber, BigDecimal amount) {
 
-        log.info("Crediting {} to account : {}", ammount, accountNumber);
+        log.info("Crediting {} to account : {}", amount, accountNumber);
 
         Account account = accountRepository.findByAccountNumber(accountNumber)
                 .orElseThrow(() -> new RuntimeException("Account Not Found"));
 
-        account.setBalance(account.getBalance().add(ammount));
+        account.setBalance(account.getBalance().add(amount));
         accountRepository.save(account);
 
         log.info("Balance Credited. New Balance: {}", account.getBalance());

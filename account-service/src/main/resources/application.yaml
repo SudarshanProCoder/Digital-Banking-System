@@ -34,8 +34,8 @@ spring:
                 type: java.util.HashMap
 
     producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSeserializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSeserializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 server:
   port: 8081
@@ -45,6 +45,10 @@ management:
     web:
       exposure:
         include: "*"
-        
+
+logging:
+  file:
+    name: logs/account-service.log
+
         
         
